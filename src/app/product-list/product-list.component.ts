@@ -31,10 +31,7 @@ export class ProductListComponent implements OnInit {
      new Product(5639814580025, 'Charlotte Potatos', 97800, 85300,87458,100000)
    ]
 
-  product = {
-      id : 1,
-       description: 'Learn to Dance'
-   }
+ 
   constructor(private router: Router) { }
 
   ngOnInit() {
