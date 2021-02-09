@@ -19,11 +19,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  // console.log(this.username);
-    //if(this.username==="anca" && this.password === 'anca') {
+
       handleLogin() {
-        // console.log(this.username);
-        //if(this.username==="in28minutes" && this.password === 'dummy') {
+        
         if(this.hardcodedAuthenticationService.authenticate(this.username, this.password)) {
           //Redirect to Welcome Page
           this.router.navigate(['welcome', this.username])

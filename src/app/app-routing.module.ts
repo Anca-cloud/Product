@@ -12,9 +12,9 @@ import { ErrorComponent } from './error/error.component';
 const routes: Routes = [ { path: '', component: LoginComponent  },//canActivate, RouteGuardService
 { path: 'login', component: LoginComponent },
 { path: 'welcome/:name', component: WelcomeComponent, canActivate:[RouteGuardServiceService]},
-{ path: 'todos', component: ProductListComponent, canActivate:[RouteGuardServiceService] },
+{ path: 'products', component: ProductListComponent, canActivate:[RouteGuardServiceService] },
 { path: 'logout', component: LogoutComponent, canActivate:[RouteGuardServiceService] },
-{ path: 'todos/:id', component: ProductComponent, canActivate:[RouteGuardServiceService] },
+{ path: 'products/:id', component: ProductComponent, canActivate:[RouteGuardServiceService] },
 
 { path: '**', component: ErrorComponent }];
 
