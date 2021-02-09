@@ -1,0 +1,36 @@
+<h1> Todo </h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ProductId</th>
+        <th>ProductName</th>
+        <th>Sales Q1</th>
+        <th>Sales Q2</th>
+        <th>Sales Q3</th>
+        <th>Sales Q4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--   for (Product product: products) {  -->
+              <tr *ngFor="let product of products">
+                <td>{{product.ProductId}}</td>
+                <td>{{product.ProductName}}</td>
+                <td>{{product.salesQ1}}</td>
+                <td>{{product.salesQ2}}</td>
+                <td>{{product.salesQ3}}</td>
+                <td>{{product.salesQ4}}</td>
+              </tr>
+      <!-- } -->
+    </tbody>
+
+  </table>
+
+  <div class="row">
+      <button (click)="addProduct()" class="btn btn-success">Add</button>
+  </div>
+
+</div>
