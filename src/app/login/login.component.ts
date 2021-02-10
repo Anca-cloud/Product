@@ -9,8 +9,8 @@ import { HardcodedAuthenticationService } from './../hardcoded-authentication.se
 })
 export class LoginComponent implements OnInit {
 
-  username = 'anca'
-  password = 'anca'
+  username = 'sysadmin'
+  password = 'sysadmin'
   errorMessage = 'Invalid Credentials'
   invalidLogin = false
 

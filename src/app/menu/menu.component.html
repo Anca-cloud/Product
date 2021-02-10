@@ -3,8 +3,9 @@
       <div>Products</div>
 
       <ul class="navbar-nav">
-          <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome" class="nav-link">Home</a></li>
-          <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/products" class="nav-link">Products</a></li>
+          <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome" class="nav-link">Welcome</a></li>
+          <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/product-list" class="nav-link">Sales</a></li>
+          <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/new-product" class="nav-link">New Product</a></li>
       </ul>
 
       <ul class="navbar-nav navbar-collapse justify-content-end">
@@ -13,3 +14,17 @@
       </ul>
   </nav>
 </header>
+<div class="div-header">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+</div>
+<div class="div-sub-header">
+  <div class="div-button-menu">
+    <button class="button-menu-sales" (click)="gotoSalesPage()">Sales</button>
+  </div>
+  <div class="div-button-menu">
+    <button class="button-menu-newproduct" (click)="gotoNewProductPage()">New Product</button>
+  </div>
+</div>

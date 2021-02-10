@@ -1,3 +1,26 @@
-<p>
-  new-product works!
-</p>
+</div>
+<div class="div-search-product"> 
+	<fieldset class="fieldset-search-product">
+        <legend><b>Search Product Form</b></legend>
+		  <form #searchProductForm="ngForm" (ngSubmit)="searchProductByName(searchProductForm)">
+        <label for="Search By" class="search-label">Search By:</label><select class="search-select" name="type" required [(ngModel)]="displayType"><option *ngFor="let type of types" [value]="type">{{type}}</option></select>
+			 <ng-container *ngIf="displayType==='id'"><label for="id" class="search-label">ID:</label><input name="id" class="search-input" type="text" required [(ngModel)]=id></ng-container>
+			 <ng-container *ngIf="displayType==='manager'"><label for="manager" class="search-label">Manager:</label><input name="manager" class="search-input" type="text" required [(ngModel)]=manager></ng-container>
+			 <input value="Search" class="search-submit-button" type=submit [disabled]="!searchProductForm.form.valid"/>
+		  </form>
+		  <br/><br/>
+		  <ng-container *ngIf="isNoResult && isFormSubmitted"><span class="span-no-result">No Result</span></ng-container>
+		  <ng-container *ngIf="!isNoResult && isFormSubmitted">
+		     <table>
+		        <tr><th *ngFor="let head of headsTab">{{head}}</th><th></th><th></th></tr>
+		        <tr class="{{product.id}}" *ngFor="let product of searchProductResult">
+		          <td>{{product.id}}</td>
+		          <td>{{product.name}}</td>
+		          <td>{{product.manager}}</td>
+		          <td>{{product.startDate | date:'dd/MM/yyyy'}}</td>
+		        </tr>
+		     </table>
+		  </ng-container>
+	</fieldset>
+</div>
+<app-back-to-menu></app-back-to-menu>

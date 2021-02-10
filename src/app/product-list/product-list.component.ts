@@ -37,6 +37,6 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
   addProduct() {
-    this.router.navigate(['todos',-1])
+    this.router.navigate(['products',-1])
   }
 }
