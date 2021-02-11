@@ -31,11 +31,8 @@ constructor(private productService: ProduitService) { }
 
   ngOnInit() {
   }
-/**
-  * Search books by title or by isbn
-  * @param searchBookForm
-  */
- searchBooksByType(searchProductForm){
+
+ searchProductByType(searchProductForm){
   
   this.displayMessageModal = false;
   if(!searchProductForm.valid){
